@@ -18,5 +18,15 @@
 @media(max-width:720px){.card-list-row{grid-template-columns:42px minmax(0,1fr) 28px auto}.row-copy{display:grid;place-items:center;width:28px;height:34px}.row-copy span{display:none}.row-open{display:none}}
 .public-top{justify-content:flex-end;margin-bottom:16px}.profile-card{min-height:600px}.profile-content{justify-content:center}.profile-main{flex:none}.public-after{margin-top:22px}
 .sample-portrait{background:#dce7f5;padding:14px}.sample-photo-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;border:1px dashed #9eb9d8;border-radius:11px;background:#eaf2fb;color:#3b668f;text-align:center}.sample-photo-placeholder span{font-family:var(--body);font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+
+/* Keep the hero's copy inside its own column at wide and intermediate widths. */
+.home-hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.home-copy{min-width:0;padding:96px clamp(28px,4vw,64px) 88px}
+.home-copy h1{max-width:100%;font-size:clamp(52px,4.2vw,76px);line-height:1.05;letter-spacing:-.04em;overflow-wrap:break-word;text-wrap:balance}
+.home-copy>p{max-width:560px}
+.hero-showcase{min-width:0}
+@media(max-width:1000px){.home-hero{display:block}.home-copy{padding:76px clamp(28px,5vw,54px) 70px}.hero-showcase{min-height:540px}}
+@media(max-width:720px){.home-copy{padding:62px 24px 54px}.home-copy h1{font-size:clamp(44px,10vw,64px)}.hero-showcase{min-height:430px}}
+@media(max-width:430px){.home-copy h1{font-size:clamp(43px,10.5vw,48px)}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 
